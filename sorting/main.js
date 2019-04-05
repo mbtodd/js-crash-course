@@ -1,6 +1,8 @@
-var letters = [ 'R', 'O', 'F', 'L' ];
+var letters = [ 'R', 'O', 'F', 'L'];
 
-console.log(letters.sort());
+letters[4] = ''
+
+console.log([...new Set(letters.sort())]);
 
 // alert(letters);
 
@@ -16,28 +18,29 @@ console.log(numbers.sort());
 
 var numbers = [ 4, 3, 5, 9 ];
 
-numbers.sort((a, b) => {
-	return b < a;
-});
+const newNum = numbers.sort((a, b) => b < a);
 
-console.log(numbers);
+console.log(newNum);
 
 var shapes = [ [ 5, 'Pentagon' ], [ 3, 'Triangle' ], [ 8, 'Octagon' ], [ 4, 'Rectangle' ] ];
 
 shapes.sort((a, b) => {
 	return a[0] < b[0];
 });
+const newShapes = shapes.sort((a, b) => a[0] < b[0]);
+
 console.log(new Set(shapes));
+console.log([...new Set(newShapes)]);
 
 //
 /*  */
 
-var shapes = [ [ 4, 'Trapezium' ], [ 5, 'Pentagon' ], [ 3, 'Triangle' ], [ 4, 'Rectangle' ], [ 4, 'Square' ] ];
+var shapes = [ [ 4, 'Trapezium' ], [ 5, 'Pentagon' ], [ 3, 'Triangle' ], [ 4, 'Rectangle' ], [ 4, 'Square' ], [ 0,'hello'] ];
 
 shapes.sort(function(a, b) {
 	if (a[0] === b[0]) {
-		var x = a[1].toLowerCase(),
-			y = b[1].toLowerCase();
+		let x = a[1],
+			y = b[1];
 
 		return x < y ? -1 : x > y ? 1 : 0;
 	}
