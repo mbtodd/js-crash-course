@@ -3,13 +3,12 @@
 
 // if (x > 5 && y > 10) {
 // 	console.log('x is more than 5 or y is more than 10');
-// };
+// }
 
 // ternary operator
 /* ? = then  : = else */
 const x = 9;
 
-// const color = x > 10 ? 'red' : 'blue';
 const color = 'green';
 // console.log(color);
 
@@ -28,19 +27,25 @@ switch (color) {
 
 /* Conditional (ternary) operator */
 
-const getFee = (isMember) => (isMember ? '$2.00' : '$10.00');
+const getFee = isMember => (isMember ? '$2.00' : '$10.00');
 
 console.log(getFee(true));
 console.log(getFee(false));
 console.log(getFee(0));
 
-let age = 26;
+let age = 20;
 let beverage = age >= 21 ? 'Beer' : 'Juice';
 
 console.log(beverage);
 
-const greeting = (person) => {
+const smokeCrack = crackHead => (crackHead ? 'jail' : 'free');
+console.log(smokeCrack(true))
+
+
+const greeting = person => {
 	let name = person ? person.name === string : 'stranger';
 	return 'Howdy, ' + name;
 };
 console.log(greeting({ name: 10 }));
+
+
