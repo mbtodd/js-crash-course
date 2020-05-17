@@ -9,7 +9,7 @@ let fruits = [
 ];
 
 let favFruits = `Here is a list of my favorite fruits: ${fruits[2]}`;
- console.log("favFruits ", favFruits);
+ console.log(favFruits);
 
 
 // add grapes after pears using es6:
@@ -145,5 +145,5 @@ console.log(todoText);
 // find the completed todo object and filter the text:
 const todoFilter = todos.filter(arr => {});
 
-let todoArray = Array.isArray(todos.text)
- console.log("todoArray ", todoArray);
+let todoArray = Array.isArray(todoFilter)
+ console.log(todoArray);

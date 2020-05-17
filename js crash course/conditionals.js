@@ -1,16 +1,16 @@
-// const x = '6';
-// const y = 11;
+let m = '6';
+let t = 11;
 
-// if (x > 5 && y > 10) {
-// 	console.log('x is more than 5 or y is more than 10');
-// }
+if (m > 5 && t > 10) {
+	console.log('m is more than 5 or t is more than 10');
+}
 
 // ternary operator
 /* ? = then  : = else */
 const x = 9;
 
-const color = 'green';
-// console.log(color);
+const color = 'black';
+console.log(color);
 
 // switch
 switch (color) {
@@ -20,8 +20,14 @@ switch (color) {
 	case 'blue':
 		console.log('color is blue');
 		break;
+	case 'green':
+		console.log('color is green');
+		break;
+	case 'purple':
+		console.log('color is purple');
+		break;
 	default:
-		console.log('color is NOT red or blue');
+		console.log('color is NOT red, blue, green, or purple');
 		break;
 }
 
@@ -42,10 +48,14 @@ const smokeCrack = crackHead => (crackHead ? 'jail' : 'free');
 console.log(smokeCrack(true))
 
 
-const greeting = person => {
-	let name = person ? person.name === string : 'stranger';
-	return 'Howdy, ' + name;
-};
-console.log(greeting({ name: 10 }));
+// const greeting = person => {
+// 	let name = person ? person.name === string : 'stranger';
+// 	return 'Howdy, ' + name;
+// };
+// console.log(greeting({ name: 'michael'}));
+
+
+
+
 
 

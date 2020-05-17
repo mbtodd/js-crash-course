@@ -39,8 +39,9 @@ const todos = [
 
 const pullOut = todos.forEach((arr) => {
 	console.log(arr.text);
+	return arr.text;
 });
 
 // lexical this
 
-exp;
+// exp;

@@ -16,7 +16,7 @@ var ages = [ 4, 12, 16, 20 ];
 // }
 
 /* es6 function */
-const myFunction = () =>
-	(document.getElementById('demo').innerHTML = ages.find((age) => {
-		return age >= document.getElementById('ageToCheck').value;
-	}));
+// const myFunction = () =>
+// 	(document.getElementById('demo').innerHTML = ages.find((age) => {
+// 		return age >= document.getElementById('ageToCheck').value;
+// 	}));

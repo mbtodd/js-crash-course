@@ -25,17 +25,18 @@ console.log(person3.getFullName());
 // Better way to run a function inside of function
 
 class Family {
-	constructor(parent, children, pet) {
+	constructor(parent, children, pet, wife) {
 		this.parent = parent;
 		this.children = children;
 		this.pet = pet;
+		this.wife = wife;
 	}
 	getFullHouse() {
-		return `${this.parent} ${this.children} ${this.pet}`;
+		return `${this.parent} ${this.children} ${this.pet} ${this.wife}`;
 	}
 }
 
-const familyMember1 = new Family('Michael', 'Greyson', 'Dorothy');
+const familyMember1 = new Family('Michael', 'Greyson', 'Dorothy', 'Jennifer');
 
 console.log(familyMember1.getFullHouse());
 console.log(familyMember1);

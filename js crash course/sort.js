@@ -1,4 +1,7 @@
 const names = [ 'M', 'I', 'K', 'E', 'K', 'I', 'Y' ];
+const newNames = names.sort();
+console.log(newNames);
+console.log([...new Set(newNames)])
 
 console.log([ ...new Set(names) ]);
 
@@ -41,28 +44,28 @@ console.log(x());
 
 console.log(Math.max(1, 2, 3, 6, 3));
 
-const arr = [ 8, 9, 1, 2, 15, 30, 5, 1, 50, 45, 7 ];
+const arr = [ 8, 9, 1, 2, 15, 30, 5, 1, 50, 45, 7, 3, 1 ];
 
 const newNum = arr.sort((a, b) => a - b);
+console.log([ ...new Set(newNum) ]);
 const numSet = [ ...new Set(newNum) ];
 console.log(numSet);
-console.log([ ...new Set(newNum) ]);
 // console.log(
 // 	arr.sort((a, b) => {
 // 		return a > b;
 // 	})
 // );
 
-// let newArr = arr.sort((a, b) => {
-// 	return a > b;
-// });
-// console.log(newArr);
+let newArr = arr.sort((a, b) => {
+	return a > b;
+});
+console.log(newArr);
 
-// let lastSort = [ ...new Set(newArr) ];
-// const finSort = lastSort.sort((a, b) => {
-// 	return a > b;
-// });
-// console.log(finSort);
+let lastSort = [ ...new Set(newArr) ];
+const finSort = lastSort.sort((a, b) => {
+	return a > b;
+});
+console.log(finSort);
 
 let i = Number.MIN_VALUE;
 

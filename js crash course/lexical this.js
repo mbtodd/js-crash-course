@@ -1,36 +1,36 @@
 // Constructor function
-function Person(firstName, lastName, address, dob) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.address = address;
-	this.dob = new Date(dob);
-	this.BirthYear = function() {
-		return this.dob.getFullYear();
-	};
-	this.getFullName = function() {
-		return `${this.firstName} ${this.lastName} `;
-	};
-	this.nameAddress = function() {
-		return `${this.firstName} ${this.lastName} ${this.address}`;
-	};
-}
+// function Person(firstName, lastName, address, dob) {
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.address = address;
+// 	this.dob = new Date(dob);
+// 	this.BirthYear = function() {
+// 		return this.dob.getFullYear();
+// 	};
+// 	this.getFullName = function() {
+// 		return `${this.firstName} ${this.lastName} `;
+// 	};
+// 	this.nameAddress = function() {
+// 		return `${this.firstName} ${this.lastName} ${this.address}`;
+// 	};
+// }
 
 // es6 Class
 
-// class Person {
-// 	constructor(firstName, lastName, address, dob) {
-// 		this.firstName = firstName;
-// 		this.lastName = lastName;
-// 		this.address = address;
-// 		this.dob = new Date(dob);
-// 	}
-// 	getBirthYear() {
-// 		return this.dob.getFullYear();
-// 	}
-// 	getFullName() {
-// 		return `${this.firstName} ${this.lastName}`;
-// 	}
-// }
+class Person {
+	constructor(firstName, lastName, address, dob) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.dob = new Date(dob);
+	}
+	getBirthYear() {
+		return this.dob.getFullYear();
+	}
+	getFullName() {
+		return `${this.firstName} ${this.lastName}`;
+	}
+}
 
 // Instantiate object
 const person1 = new Person('John', 'Doe', '123 Stone Street', '4-3-1980');
@@ -42,23 +42,24 @@ const person3 = new Person(
 	'08-03-1970'
 );
 
-console.log(person3.BirthYear());
+console.log(person3.getBirthYear());
 console.log(person1.firstName);
 console.log(person3.getFullName());
 console.log(person3.address);
 
 // Better way to run a function inside of function
 
-function Family(parent, children, pet) {
+function Family(parent, children, pet, wife) {
 	this.parent = parent;
 	this.children = children;
 	this.pet = pet;
+	this.wife = wife;
 	Family.prototype.fullHouse = function() {
-		return `${this.parent} ${this.children} ${this.pet}`;
+		return `${this.parent} ${this.children} ${this.pet} ${this.wife}`;
 	};
 }
 
-const familyMember1 = new Family('Michael', 'Greyson', 'Dorothy');
+const familyMember1 = new Family('Michael', 'Greyson', 'Dorothy', 'Jennifer');
 
 console.log(familyMember1.fullHouse());
 console.log(familyMember1);

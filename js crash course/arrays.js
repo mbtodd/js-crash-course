@@ -55,7 +55,7 @@ const person = {
 
 // add an email property
 person.email = 'john@gmail.com';
-console.log(person);
+console.log(person.firstName);
 
 // destructuring
 const { firstName, lastName, hobbies: [], address: { street } } = person;
@@ -99,11 +99,12 @@ todos.forEach((arr) => {
 // const todoText = todos.map((arr) => {
 // 	return arr.text;
 // });
+
 // console.log(todoText);
-const todoText = todos.map((arr) => {
+const todoText2 = todos.map((arr) => {
 	return arr.text;
 });
-console.log(todoText);
+console.log(todoText2);
 
 // filter
 const justFilter = todos.filter((arr) => {

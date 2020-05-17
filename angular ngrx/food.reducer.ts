@@ -23,3 +23,16 @@ export interface ICar {
 export interface MyAppState{
   vehicles: Array<ICar>
 }
+
+export function cars_reducer (state: Array<ICar> = [], action: Action) {
+  switch (action.type) {
+    case carsActions.ADD_CARS:
+      return [...state, action.payload]
+  
+      
+      break;
+  
+    default:
+      break;
+  }
+}
